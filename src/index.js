@@ -9,9 +9,7 @@ const container = document.getElementById("root");
 const root = createRoot(container);
 
 root.render(
-  // <BrowserRouter basename="/acne_website">
-  //   <App />
-  // </BrowserRouter>
+
   <HashRouter>
     <App />
   </HashRouter>
