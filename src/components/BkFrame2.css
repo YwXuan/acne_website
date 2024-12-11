@@ -1,0 +1,133 @@
+.border-frame-child {
+  width: 894.5px;
+  height: 593.6px;
+  position: relative;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-cornflowerblue);
+  display: none;
+  max-width: 100%;
+}
+.frame-child1 {
+  height: 168px;
+  width: 168px;
+  position: relative;
+  border-radius: var(--br-mini);
+  background-color: var(--color-gainsboro);
+  display: none;
+}
+.div32 {
+  height: 280px;
+}
+.div33,
+.rectangle-parent1 {
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  font-size: 45px;
+}
+.rectangle-parent1 {
+  border-radius: var(--br-mini);
+  padding: 15px;
+  gap: 30px;
+  font-size: 35px;
+}
+.div33 {
+  align-self: stretch;
+  height: 150px;
+  font-size: 40px;
+  position: relative;
+  text-align: left;
+  flex-shrink: 0;
+}
+.back1,
+.div34 {
+  position: absolute;
+}
+.back1 {
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 65px;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-lightsteelblue);
+  width: 200px;
+}
+.div34 {
+  top: 14px;
+  left: 0;
+  display: inline-block;
+  width: 330px;
+  z-index: 1;
+}
+.button {
+  height: 80px;
+  width: 330px;
+  position: relative;
+  max-width: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+.button-wrapper {
+  width: 740px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 100%;
+  font-size: var(--font-size-13xl);
+}
+.bk-frame1,
+.border-frame1 {
+  border-radius: var(--br-31xl);
+  flex-shrink: 0;
+  display: flex;
+  box-sizing: border-box;
+}
+.border-frame1 {
+  width: 895px;
+  background-color: var(--color-cornflowerblue);
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-42xl) var(--padding-18xl) var(--padding-5xl)
+    var(--padding-53xl);
+  gap: var(--gap-3xs);
+  max-width: 100%;
+}
+.bk-frame1 {
+  width: 1012px;
+  margin: 0 !important;
+  position: absolute;
+  top: -383px;
+  right: -870px;
+  background-color: var(--color-darkslateblue);
+  overflow: hidden;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-16xl);
+  z-index: 1;
+  text-align: center;
+  font-size: var(--font-size-29xl);
+  color: var(--color-black);
+  font-family: var(--font-kaisei-tokumin);
+}
+@media screen and (max-width: 1000px) {
+  .div32,
+  .div33 {
+    font-size: var(--font-size-19xl);
+  }
+  .div34 {
+    font-size: var(--font-size-7xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .div32,
+  .div33 {
+    font-size: var(--font-size-10xl);
+  }
+  .div34 {
+    font-size: var(--font-size-lgi);
+  }
+}

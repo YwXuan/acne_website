@@ -1,0 +1,137 @@
+.rectangle-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-mini);
+  background-color: var(--color-gainsboro);
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.div31 {
+  position: absolute;
+  top: calc(50% - 35px);
+  left: calc(50% - 45px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.group-div {
+  height: 147px;
+  width: 320px;
+  margin: 9px;
+  border-radius: var(--br-mini);
+  background-color: var(--color-gainsboro);
+  cursor: pointer;
+  padding: 10px;
+  right: 120px;
+  z-index: 2;
+}
+.radio{
+  cursor: pointer;
+  display: inline-block;
+  display: none;
+}
+.border-frame,
+.detect-icon2 {
+  overflow: hidden;
+  position: absolute;
+}
+
+.border-frame {
+  height: 717px;
+  width: 1012px;
+  margin: 0 !important;
+  top: -383px;
+  right: -870px;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-darkslateblue);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 80px 250px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.background-container {
+  background-color: rgba(65, 116, 199, 1);
+  height: 617px;  
+  width: 912px;   
+  position: fixed;
+  border-radius: var(--br-31xl);
+  top: 225px;     
+  left: 270px;    
+  z-index: -1;
+}
+.detect-icon2 {
+  height: 100%;
+  flex: 1;
+  z-index: 2;
+  object-fit: contain;
+  left: 24px;
+  top: 0;
+  width: 100%;
+  transform: scale(1.133);
+  border-radius: 10px;
+}
+.wrapper-detect1 {
+  height: 467px;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inner-frame1 {
+  width: 361px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  max-width: 100%;
+}
+.teacher-icon5 {
+  height: 562px;
+  width: 227px;
+  position: relative;
+  object-fit: cover;
+  cursor: pointer;
+  z-index: 2;
+}
+.sub-frame {
+  width: 1402px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 var(--padding-xl) 0 0;
+  box-sizing: border-box;
+  gap: var(--gap-xl);
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--font-size-29xl);
+  color: var(--color-black);
+  font-family: var(--font-kaisei-tokumin);
+}
+@media screen and (max-width: 1000px) {
+  .div31 {
+    font-size: var(--font-size-19xl);
+  }
+}
+@media screen and (max-width: 725px) {
+  .sub-frame {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 450px) {
+  .div31 {
+    font-size: var(--font-size-10xl);
+  }
+}

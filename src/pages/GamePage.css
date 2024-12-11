@@ -1,0 +1,100 @@
+.bkground-icon4,
+.game-icon1 {
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.bkground-icon4 {
+  margin: 0 !important;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.game-icon1 {
+  flex: 1;
+  z-index: 3;
+  object-fit: contain;
+  top: 70px;
+  transform: scale(1.111);
+}
+
+.wrapper-game {
+  height: 566px;
+  flex: 1;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.border-frame-parent {
+  width: 369px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  max-width: 100%;
+}
+
+.teacher-icon2 {
+  height: 562px;
+  width: 227px;
+  position: relative;
+  object-fit: cover;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.frame-container,
+.gamepage {
+  display: flex;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.frame-container {
+  width: 1402px;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 var(--padding-xl) 0 0;
+  gap: var(--gap-xl);
+}
+
+.gamepage {
+  position: relative;
+  background-color: var(--color-white);
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-27xl) 0 0;
+  gap: var(--gap-302xl);
+  letter-spacing: normal;
+}
+
+@media screen and (max-width: 725px) {
+  .frame-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .gamepage {
+    gap: var(--gap-302xl);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .gamepage {
+    gap: var(--gap-302xl);
+  }
+}

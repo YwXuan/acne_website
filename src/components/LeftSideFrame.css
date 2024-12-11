@@ -1,0 +1,120 @@
+.rectangle-shape1 {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-cornflowerblue);
+  max-width: 95%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px;
+  overflow: auto;
+  max-height: 600px;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: space-between;
+  &::-webkit-scrollbar{
+    height: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #C8E8F9;
+    border-radius: 10px;
+    margin: 20px 130px;
+  }
+  &::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: rgb(112, 110, 223);
+  }
+}
+
+.group-div1,
+.group-div {
+  height: 80px;
+  width: 780px;
+  margin: 0px 35px;
+  display: grid;
+  align-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  border-radius: var(--br-mini);
+  background-color: var(--color-gainsboro);
+  cursor: pointer;
+  z-index: 2;
+  font-size: 30px;
+}
+
+.group-div1 label {
+  cursor: pointer;
+}
+
+.background-frame3 {
+  overflow: hidden;
+  position: absolute;
+  height: 663px;
+  width: 1012px;
+  margin: 0 !important;
+  top: -286px;
+  right: -910px;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-darkslateblue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-16xl);
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.stu-icon2 {
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  max-width: 100%;
+  z-index: 2;
+  object-fit: contain;
+  left: 50px;
+  top: 0;
+  width: 100%;
+  transform: scale(1.308);
+}
+
+.wrapper-stu1 {
+  height: 564px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+
+}
+
+.student-frame1 {
+  width: 321px;
+  position: relative;
+}
+
+.teacher-icon4 {
+  align-self: stretch;
+  width: 187px;
+  position: relative;
+  object-fit: cover;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.left-side-frame {
+  width: 1402px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 var(--padding-xl) 0 0;
+  box-sizing: border-box;
+  gap: var(--gap-xl);
+}
+
+@media screen and (max-width: 725px) {
+  .left-side-frame {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

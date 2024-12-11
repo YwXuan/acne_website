@@ -1,0 +1,128 @@
+.bkground-icon,
+.stu-icon {
+  overflow: hidden;
+  object-fit: contain;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.bkground-icon {
+  position: fixed;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.stu-icon {
+  height: 380px;
+  flex: 1;
+  left: 329px;
+  position: fixed;
+  cursor: pointer;
+  z-index: 1;
+}
+.stu-wrapper {
+  width: 396px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-11xl);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.detect-icon {
+  align-self: stretch;
+  flex: 1;
+  position: fixed;
+  max-width: 380px;
+  left: 150px;
+  top: 480px;
+  overflow: hidden;
+  object-fit: cover;
+  cursor: pointer;
+  z-index: 1;
+}
+.frame-parent,
+.sub-frame-a {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-parent {
+  align-self: stretch;
+  flex: 1;
+  align-items: flex-end;
+  gap: 29px;
+}
+.sub-frame-a {
+  height: 935px;
+  width: 612px;
+  align-items: flex-start;
+  padding: 0 0 var(--padding-3xs);
+  box-sizing: border-box;
+  min-width: 612px;
+}
+.game-icon{
+  position: fixed;
+  top: 66px;
+  left: 955px;
+  width: 330px;
+  height: 374px;
+  object-fit: cover;
+  cursor: pointer;
+  z-index: 1;
+}
+.teacher-icon {
+  position: fixed;
+  object-fit: contain;
+  z-index: 1;
+  top: 477px;
+  left: 915px;
+  width: 453px;
+  height: 562px;
+}
+.game-parent {
+  height: 921px;
+  width: 470px;
+  position: relative;
+  min-width: 470px;
+  max-width: 100%;
+}
+.homepage {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: var(--padding-42xl) 78px var(--padding-9xl) var(--padding-38xl);
+  box-sizing: border-box;
+  gap: var(--gap-xl);
+  letter-spacing: normal;
+}
+@media screen and (max-width: 1250px) {
+  .game-parent,
+  .sub-frame-a {
+    flex: 1;
+  }
+  .homepage {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .sub-frame-a {
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .game-parent {
+    min-width: 100%;
+  }
+  .homepage {
+    padding-left: var(--padding-9xl);
+    padding-right: var(--padding-20xl);
+    box-sizing: border-box;
+  }
+}

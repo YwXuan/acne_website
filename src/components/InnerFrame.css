@@ -1,0 +1,67 @@
+.detect-logo-item,
+.div30 {
+  position: relative;
+  max-width: 100%;
+}
+.detect-logo-item {
+  height: 91px;
+  width: 384px;
+  border-radius: var(--br-mid);
+  background-color: var(--color-slategray);
+  display: none;
+}
+.div30 {
+  height: 70px;
+  width: 330px;
+  font-size: var(--font-size-29xl);
+  font-family: var(--font-kaisei-tokumin);
+  color: var(--color-white);
+  text-align: center;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.detect-logo2,
+.inner-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: 1440px;
+}
+.detect-logo2 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-3xs) var(--padding-3xs) var(--padding-2xs);
+  background-color: var(--color-slategray);
+  width: 384px;
+  border-radius: var(--br-mid);
+  align-items: center;
+  z-index: 1;
+}
+.detect-logo2:hover {
+  background-color: var(--color-lightslategray);
+}
+.inner-frame {
+  align-self: stretch;
+  align-items: flex-start;
+  padding: 0 var(--padding-xl) 0 var(--padding-639xl);
+}
+@media screen and (max-width: 1050px) {
+  .inner-frame {
+    padding-left: var(--padding-310xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 725px) {
+  .inner-frame {
+    padding-left: var(--padding-145xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .inner-frame {
+    padding-left: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}
