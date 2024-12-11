@@ -1,6 +1,6 @@
 {
   "name": "acne_website",
-  "homepage": "https://github.com/YwXuan/acne_website.git",
+  "homepage": "https://YwXuan.github.io/acne_website",
   "version": "0.1.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -26,8 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predepoly": "npm run build",
-    "depoly": "gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "root": true

@@ -11,7 +11,9 @@ const SchoolVideo = () => {
 
   return (
     <div className="schoolvideo">
-      <img className="bkground-icon5"  src="/bkground@2x.png" />
+      <img className="bkground-icon5"  
+        src={`${process.env.PUBLIC_URL}/bkground@2x.png`} 
+        />
       <InnerFrame prop={topic.topic} />
       <SecondaryFrame  account={account} pretest={pretest} />
     </div>

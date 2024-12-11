@@ -197,7 +197,9 @@ const Pretest = () => {
 
   return (
     <div className="schoolquiz">
-      <img className="bkground-icon6" alt="" src="/bkground@2x.png" />
+      <img className="bkground-icon6" alt="" 
+        src={`${process.env.PUBLIC_URL}/bkground@2x.png`}
+        />
       <InnerFrame prop="仔細想想看" />
       <div className="frame-div">
         <div className="bk-frame-parent">
@@ -212,7 +214,7 @@ const Pretest = () => {
               className="stu-icon1"
               loading="eager"
               alt=""
-              src="/stu@2x.png"
+              src={`${process.env.PUBLIC_URL}/stu@2x.png`}
             />
           </div>
         </div>
@@ -220,7 +222,7 @@ const Pretest = () => {
           className="teacher-icon3"
           loading="eager"
           alt=""
-          src="/teacher@2x.png"
+          src={`${process.env.PUBLIC_URL}/teacher@2x.png`}
           onClick={onTeacherImageClick}
         />
       </div>

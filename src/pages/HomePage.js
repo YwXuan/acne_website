@@ -17,7 +17,7 @@ const onGameImageClick = useCallback(() => {
 
   return (
     <div className="homepage">
-      <img className="bkground-icon" alt="" src="/bk_homepage@2x.png" />
+      <img className="bkground-icon" alt="" src={`${process.env.PUBLIC_URL}/bk_homepage@2x.png`} />
       <div className="sub-frame-a">
         <div className="frame-parent">
           <div className="stu-wrapper">
@@ -26,7 +26,7 @@ const onGameImageClick = useCallback(() => {
               className="stu-icon"
               loading="eager"
               alt=""
-              src="/stu@2x.png"
+              src={`${process.env.PUBLIC_URL}/stu@2x.png`}
               onClick={onStuImageClick}
             />
           </Popover>
@@ -36,7 +36,7 @@ const onGameImageClick = useCallback(() => {
             className="detect-icon"
             loading="eager"
             alt=""
-            src="/detect@2x.png"
+            src={`${process.env.PUBLIC_URL}/detect@2x.png`}
             onClick={onDetectImageClick}
           />
         </div>
@@ -47,7 +47,7 @@ const onGameImageClick = useCallback(() => {
         <img 
           className="game-icon"
           alt="" 
-          src="/game@2x.png" 
+          src={`${process.env.PUBLIC_URL}/game@2x.png`}
           onClick={onGameImageClick}
         />
         </Popover>
@@ -55,7 +55,7 @@ const onGameImageClick = useCallback(() => {
           className="teacher-icon"
           loading="eager"
           alt=""
-          src="/teacher@2x.png"
+          src={`${process.env.PUBLIC_URL}/teacher@2x.png`}
         />
       </div>
     </div>

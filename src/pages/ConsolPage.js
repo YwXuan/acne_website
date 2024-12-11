@@ -14,7 +14,9 @@ const ConsolPage = () => {
 
   return (
     <div className="consolpage">
-      <img className="bkground-icon3" alt="" src="/bkground@2x.png" />
+      <img className="bkground-icon3" alt="" 
+        src={`${process.env.PUBLIC_URL}/bkground@2x.png`} 
+        />
       <InnerFrame prop="皮膚辨識" />
       <div className="text-container-parent">
         <div className="text-container">
@@ -24,7 +26,7 @@ const ConsolPage = () => {
               className="detect-icon1"
               loading="eager"
               alt=""
-              src="/detect@2x.png"
+              src={`${process.env.PUBLIC_URL}/detect@2x.png`}
             />
           </div>
         </div>
@@ -32,7 +34,7 @@ const ConsolPage = () => {
           className="teacher-icon1"
           loading="eager"
           alt=""
-          src="/teacher@2x.png"
+          src={`${process.env.PUBLIC_URL}/teacher@2x.png`}
           onClick={onTeacherImageClick}
         />
       </div>

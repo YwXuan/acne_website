@@ -50,7 +50,7 @@ const SubFrame = () => {
               />
               <label htmlFor={item.id}>
                 <img
-                  src={`/detectpic/${item.id}.jpg`} // 替換圖片的URL
+                  src={`${process.env.PUBLIC_URL}/detectpic/${item.id}.jpg`}  // 替換圖片的URL
                   alt={item.label}
                   className="group-div"
                 />
@@ -63,8 +63,8 @@ const SubFrame = () => {
             className="detect-icon2"
             loading="eager"
             alt=""
-            src="/detect@2x.png"
-          />
+            src={`${process.env.PUBLIC_URL}/detect@2x.png`}
+            />
         </div>
       </div>
       <div className="teacher-icon5" onClick={onTeacherImageClick}>
@@ -72,7 +72,8 @@ const SubFrame = () => {
           className="teacher-icon5"
           loading="eager"
           alt=""
-          src="/teacher@2x.png"
+          
+          src={`${process.env.PUBLIC_URL}/teacher@2x.png`}
           onClick={onTeacherImageClick}
         />
       </div>

@@ -41,7 +41,9 @@ const BkFrame2 = ({ selectedId }) => {
           <div className="frame-child1" />
           {/* 使用 selectedId 來動態生成圖片路徑 */}
           <Popover open={open} trigger="click" onOpenChange={handleOpenChange} content={textData} overlayStyle={{fontSize:30,maxWidth:750}} placement="top" >
-          <img className="div32" src={`/detectpic/${selectedId}.png`} alt="圖片" />
+          <img className="div32" 
+            src={`${process.env.PUBLIC_URL}/detectpic/${selectedId}.png`} 
+            alt="圖片" />
           </Popover>
         </div>
         <div className="div33"><p>當圖片放入已經訓練好的模型後，模型會將有症狀的位置框選出來，並標示症狀名稱</p></div>

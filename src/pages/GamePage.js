@@ -15,7 +15,9 @@ const GamePage = () => {
 
   return (
     <div className="gamepage">
-      <img className="bkground-icon4" alt="" src="/bkground@2x.png" />
+      <img className="bkground-icon4" alt="" 
+        src={`${process.env.PUBLIC_URL}/bkground@2x.png`} 
+        />
       <InnerFrame prop="知識小遊戲" />
       <div className="frame-container">
         <div className="border-frame-parent">
@@ -23,10 +25,10 @@ const GamePage = () => {
           
             <div className="wrapper-game" >
                 <img
-                className="game-icon1"
-                loading="eager"
-                alt=""
-                src="/game@2x.png"
+                  className="game-icon1"
+                  loading="eager"
+                  alt=""
+                  src={`${process.env.PUBLIC_URL}/game@2x.png`}
               />         
             </div>
         </div>
@@ -34,7 +36,7 @@ const GamePage = () => {
           className="teacher-icon2"
           loading="eager"
           alt=""
-          src="/teacher@2x.png"
+          src={`${process.env.PUBLIC_URL}/teacher@2x.png`}
           onClick={onTeacherImageClick}
         />
       </div>

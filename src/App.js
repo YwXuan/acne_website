@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router,Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter  as Router,Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import SchoolPage from "./pages/SchoolPage";
 import DetectPage from "./pages/DetectPage";
@@ -32,18 +32,18 @@ function App() {
       {isLoading ? (
         <Loading />
       ):(
-      <Routes>
-        <Route path="/" element={<HomePage />}  />
-        <Route path="/homepage" element={<HomePage />} />
-        <Route path="/schoolpage" element={<SchoolPage account={account}/>} />
-        <Route path="/detectpage" element={<DetectPage />} />
-        <Route path="/consolpage/:id" element={<ConsolPage />} />
-        <Route path="/gamepage" element={<GamePage />} />
-        <Route path="/schoolvideo/:topic" element={<SchoolVideo account={account} />} />
-        <Route path="/schoolquiz/:topic" element={<SchoolQuiz />} />
-        <Route path="/pretest/" element={<Pretest />} />
-        <Route path="/Aftertest/" element={<Aftertest />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/homepage" element={<HomePage />} />
+          <Route path="/schoolpage" element={<SchoolPage account={account} />} />
+          <Route path="/detectpage" element={<DetectPage />} />
+          <Route path="/consolpage/:id" element={<ConsolPage />} />
+          <Route path="/gamepage" element={<GamePage />} />
+          <Route path="/schoolvideo/:topic" element={<SchoolVideo account={account} />} />
+          <Route path="/schoolquiz/:topic" element={<SchoolQuiz />} />
+          <Route path="/pretest/" element={<Pretest />} />
+          <Route path="/Aftertest/" element={<Aftertest />} />
+        </Routes>
     )}
       {/* 設置網頁標題和 meta 描述 */}
       {title && <title>{title}</title>}

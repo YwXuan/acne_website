@@ -10,7 +10,9 @@ const SchoolPage = () => {
 
   return (
     <div className="schoolpage">
-      <img className="bkground-icon1" alt="" src="/bkground@2x.png" />
+      <img className="bkground-icon1" alt="" 
+        src={`${process.env.PUBLIC_URL}/bkground@2x.png`} 
+        />
       <InnerFrame prop="數位小學堂" />
       <LeftSideFrame account={account} pretest={pretest} />
     </div>

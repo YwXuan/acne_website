@@ -82,7 +82,7 @@ const SecondaryFrame = () => {
             className="stu-icon3"
             loading="eager"
             alt=""
-            src="/stu@2x.png"
+            src={`${process.env.PUBLIC_URL}/stu@2x.png`}
           />
         </div>
       </div>
@@ -90,7 +90,7 @@ const SecondaryFrame = () => {
         className="teacher-icon4"
         loading="eager"
         alt={account}
-        src="/teacher@2x.png"
+        src={`${process.env.PUBLIC_URL}/teacher@2x.png`}
         onClick={onTeacherImageClick}
       />
     </div>

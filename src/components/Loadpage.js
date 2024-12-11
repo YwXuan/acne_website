@@ -18,7 +18,9 @@ export default function Loading() {
 
     return (
         <div className="absolute w-1440px h-1024px flex items-center justify-center">
-            <img className="bkground-icon" alt="" src="/bk_homepage@2x.png" style={{opacity:0.5}} />
+            <img className="bkground-icon" alt="" 
+            src={`${process.env.PUBLIC_URL}/bk_homepage@2x.png`} 
+            style={{opacity:0.5}} />
             <div className="" ref={animation}></div>
         </div>
     );

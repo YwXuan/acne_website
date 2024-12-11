@@ -44,7 +44,7 @@ const LeftSideFrame = () => {
             className="stu-icon2"
             loading="eager"
             alt=""
-            src="/stu@2x.png"
+            src={`${process.env.PUBLIC_URL}/stu@2x.png`}
           />
         </div>
       </div>
@@ -52,7 +52,7 @@ const LeftSideFrame = () => {
         className="teacher-icon4"
         loading="eager"
         alt=""
-        src="/teacher@2x.png"
+        src={`${process.env.PUBLIC_URL}/teacher@2x.png`}
         onClick={() => onOptionClick("/homepage")} 
       />
     </div>

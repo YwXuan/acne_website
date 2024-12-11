@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/YwXuan/acne_website.git/static/css/main.d9559152.css",
-    "main.js": "/YwXuan/acne_website.git/static/js/main.94a02fdf.js",
-    "index.html": "/YwXuan/acne_website.git/index.html",
-    "main.d9559152.css.map": "/YwXuan/acne_website.git/static/css/main.d9559152.css.map",
-    "main.94a02fdf.js.map": "/YwXuan/acne_website.git/static/js/main.94a02fdf.js.map"
+    "main.css": "/YwXuan/acne_website/homepage/static/css/main.d9559152.css",
+    "main.js": "/YwXuan/acne_website/homepage/static/js/main.d3193c34.js",
+    "index.html": "/YwXuan/acne_website/homepage/index.html",
+    "main.d9559152.css.map": "/YwXuan/acne_website/homepage/static/css/main.d9559152.css.map",
+    "main.d3193c34.js.map": "/YwXuan/acne_website/homepage/static/js/main.d3193c34.js.map"
   },
   "entrypoints": [
     "static/css/main.d9559152.css",
-    "static/js/main.94a02fdf.js"
+    "static/js/main.d3193c34.js"
   ]
 }

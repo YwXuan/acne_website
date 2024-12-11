@@ -5,7 +5,9 @@ import "./DetectPage.css";
 const DetectPage = () => {
   return (
     <div className="detectpage">
-      <img className="bkground-icon2" alt="" src="/bkground@2x.png" />
+      <img className="bkground-icon2" alt="" 
+        src={`${process.env.PUBLIC_URL}/bkground@2x.png`} 
+        />
       <InnerFrame prop="皮膚辨識" />
       <SubFrame />
     </div>
