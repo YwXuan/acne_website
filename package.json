@@ -48,5 +48,9 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.2.0",
     "react-scripts": "^5.0.1"
-  }
+  },
+  "description": "Note: Please ensure you have installed <code><a href=\"https://nodejs.org/en/download/\">nodejs</a></code>",
+  "main": "index.js",
+  "author": "YwXuan & Yuting",
+  "license": "ISC"
 }
