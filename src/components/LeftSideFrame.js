@@ -31,6 +31,7 @@ const LeftSideFrame = () => {
           <div className="rectangle-shape1" style={{padding:30}}>
           {radioGroupData.map((item) => (
             <Button
+              key={item.id}
               className="group-div1" value={item.value}
               style={{color:'black',fontSize:30}}
               onClick={() => onGroupContainerClick(item.id)} 

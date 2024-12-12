@@ -9,7 +9,6 @@ const Aftertest = () => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); //目前題數
     const [userAnswers, setUserAnswers] = useState(null); // 保存用戶的答案
     const [showResult, setShowResult] = useState(false); // 顯示正確答案
-    const params = useParams();
     const location = useLocation();
     const [correctAnswers, setCorrectAnswers] = useState(0); // 保存答對的題數
     const [currentPage, setCurrentPage] = useState("nicknameInput"); // 追蹤當前頁面
@@ -20,8 +19,8 @@ const Aftertest = () => {
     const total = 7; //總題目數
 
     const onStuImageClick = useCallback(() => {
-      navigate("/schoolpage", { state: { account: account,pretest:pretest } });
-      }, [navigate, account]);
+      navigate("/feedback", { state: { account: account, pretest:pretest, posttest:correctAnswers } });
+      }, [navigate, account,correctAnswers]);
 
     // 處理返回首頁的點擊事件
     const onTeacherImageClick = useCallback(() => {
@@ -44,12 +43,12 @@ const Aftertest = () => {
           }
           const quizData = await response.json();
           setCurrentPage("quiz");
-          setQuizData(quizData); // 将从后端获取的数据设置为 quizData 状态
+          setQuizData(quizData); // 從後端取得題目資料並更新 quizData 狀態
           console.log(quizData)
           
       } catch (error) {
           console.error('Error fetching quiz data:', error);
-          // 处理错误情况
+          // 處理錯誤
       }
   }, []);
   
@@ -68,10 +67,10 @@ const Aftertest = () => {
     }, [quizData, userAnswers, showResult, currentQuestionIndex]);
 
     const handleAns = useCallback((selectedOption) => {
-    setUserAnswers(selectedOption);
-    setShowResult(quizData[currentQuestionIndex].ans);
-    // 更新當前頁面為作答題目頁面
-    setCurrentPage("correctAnswer");
+      setUserAnswers(selectedOption);
+      setShowResult(quizData[currentQuestionIndex].ans);
+      // 更新當前頁面為作答題目頁面
+      setCurrentPage("correctAnswer");
     }, [quizData, currentQuestionIndex]);
 
     const handleNextQuestion = () => {
@@ -185,13 +184,17 @@ const Aftertest = () => {
                 </div>
             </div>
             <div className="div13" style={{textAlign:'left',}}>
-                <div className="frame-parent_b" style={{flexDirection:'colum',}}></div>  
-                <p>進行後測後，透過成績的體現，相信您對於本身對人工智慧的知識更加了解了。</p>
-                <p>若覺得還想再觀看一次，請點擊下方按鈕，也可以點右方的老師回首頁。</p>
+                <p>感謝您完成後測！我們希望了解您的學習體驗，以便改進課程內容。請花幾分鐘時間填寫回饋量表。</p>
+                <p>您的回饋對我們來說非常重要，謝謝您的寶貴意見！</p>
                 <p style={{color: '#F0AFAB'}}>此次前測成績：{pretest}題</p>
                 <p style={{color: '#F0AFAB'}}>{account}後測成績：{correctAnswers}題</p>
             </div>
-            <Button onClick={onStuImageClick} block color="cyan" size="lg" style={{color: '#000000',height:80,width: 500,alignItems:'center', fontSize: 40, alignSelf:'center'}}>觀看影片</Button>
+            <Button 
+              onClick={onStuImageClick} 
+              block color="cyan" 
+              size="lg" 
+              style={{color: '#000000',height:80,width: 500,alignItems:'center', fontSize: 40, alignSelf:'center'}}>
+                回饋量表</Button>
             </div>
         </div>  
         );

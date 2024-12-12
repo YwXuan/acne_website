@@ -10,6 +10,7 @@ import SchoolQuiz from "./pages/SchoolQuiz";
 import Loading from "./components/Loadpage";
 import Pretest from "./components/Pretest";
 import Aftertest from "./components/Aftertest";
+import Feedback from "./pages/feedback";
 
 function App() {
   const [title, setTitle] = useState("");
@@ -36,6 +37,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/homepage" element={<HomePage />} />
           <Route path="/schoolpage" element={<SchoolPage account={account} />} />
+          <Route path="/feedback" element={<Feedback/>} />
           <Route path="/detectpage" element={<DetectPage />} />
           <Route path="/consolpage/:id" element={<ConsolPage />} />
           <Route path="/gamepage" element={<GamePage />} />
