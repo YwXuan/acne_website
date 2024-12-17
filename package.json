@@ -48,6 +48,6 @@
   },
   "description": "Note: Please ensure you have installed <code><a href=\"https://nodejs.org/en/download/\">nodejs</a></code>",
   "main": "index.js",
-  "author": "YwXuan & Yuting",
+  "author": "YwXuan & YuTing",
   "license": "ISC"
 }
