@@ -76,6 +76,7 @@ const Feedback = () => {
       if (response.ok) {
         console.log('表單資料已成功提交到後端！');
         message.success("感謝您的回饋！數據已提交成功。");
+        onTeacherImageClick();
       } else {
         console.error('提交失敗:', response.statusText);
         message.error("提交失敗，請稍後重試。");
