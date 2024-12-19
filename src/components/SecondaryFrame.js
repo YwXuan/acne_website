@@ -35,7 +35,7 @@ const SecondaryFrame = () => {
   useEffect(() => {
     const fetchVideoSrc = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/api/video/${topic}`);
+        const response = await fetch(`http://140.133.74.246:31611/api/video/${topic}`);
         // console.log(topic)
         if (!response.ok) {
           throw new Error("Network response was not ok");

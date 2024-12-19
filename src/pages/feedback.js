@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import InnerFrame from "../components/InnerFrame";
-import { Form, Input, Button, Rate, Row, Col, message } from "antd";
+import { Form, Input, Button, Rate, Select, Radio, Row, Col, message } from "antd";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./feedback.css";
 
@@ -30,9 +30,13 @@ const Feedback = () => {
     name: '',
     preTestScore: 0,
     postTestScore: 0,
-    courseEvaluation: [3, 3, 3],
-    selfEvaluation: [3, 3, 3],
-    learningTransfer: [3, 3],
+    courseEvaluation: [0, 0, 0],
+    selfEvaluation: [0, 0, 0],
+    learningTransfer: [0, 0],
+    gender: '', // 性別（male/female/other）
+    hasSkinCondition: null, // 是否有皮膚疾病（true/false）
+    severitySkinCondition: null, // 皮膚疾病嚴重程度（1-10 或 null）
+    treatmentQuestion10: null, // 是否有就醫治療（true/false）
   });
   const [form] = Form.useForm(); // 初始化 form 實例
   const [allFormValues, setAllFormValues] = useState({}); // 用於保存所有頁面的數據
@@ -65,7 +69,7 @@ const Feedback = () => {
   }, [form, formValues]);  // Re-run when formValues change
   const sendFeedbackToBackend = async (feedbackData) => {
     try {
-      const response = await fetch('http://localhost:3001/api/feedback', {
+      const response = await fetch('http://140.133.74.246:31611/api/feedback', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -100,14 +104,14 @@ const Feedback = () => {
         ...currentSectionValues,
       }));
 
-      if (currentQuestionIndex < 3) {
+      if (currentQuestionIndex < 4) {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
         setTimeout(() => {
           form.setFieldsValue(allFormValues);
         }, 0);
       }
 
-      if (currentQuestionIndex === 3) {
+      if (currentQuestionIndex === 4) {
         console.log("Final form values:", formValues);
         // await sendFeedbackToBackend(formValues);
       }
@@ -225,6 +229,68 @@ const Feedback = () => {
                             </Form.Item>
                           </div>
                         )}
+                        {/* Step 5: 個人調查 */}
+                        {currentQuestionIndex === 4 && (
+                          <div>
+                            {/* <div className="title">個人資料</div> */}
+                              {/* 性別選擇 */}
+                              <Form.Item
+                                label={<span style={{ fontSize: '25px', color: "#FFFFFF" }}>性別</span>}
+                                name="gender"
+                                rules={[{ required: true, message: "請選擇性別!" }]}
+                              >
+                                <Select style={{ width: '500px' }}>
+                                  <Select.Option value="male">生理男</Select.Option>
+                                  <Select.Option value="female">生理女</Select.Option>
+                                  <Select.Option value="other">其他</Select.Option>
+                                </Select>
+                              </Form.Item>
+
+                              {/* 是否有皮膚疾病 */}
+                              <Form.Item
+                                label={<span style={{ fontSize: '25px', color: "#FFFFFF" }}>您是否有青春痘問題</span>}
+                                name="hasSkinCondition"
+                                rules={[{ required: true, message: "請選擇是否有青春痘問題!" }]}
+                              >
+                                <Radio.Group>
+                                  <Radio value={true} style={{ color: "#FFFFFF", fontSize: '20px' }}>是</Radio>
+                                  <Radio value={false} style={{ color: "#FFFFFF", fontSize: '20px' }}>否</Radio>
+                                </Radio.Group>
+                              </Form.Item>
+
+                              {/* 嚴重程度選項 */}
+                              <Form.Item
+                                shouldUpdate={(prevValues, currentValues) => prevValues.hasSkinCondition !== currentValues.hasSkinCondition}
+                              >
+                                {({ getFieldValue }) =>
+                                  getFieldValue("hasSkinCondition") === true && (
+                                    <Form.Item
+                                      label={<span style={{ fontSize: '30px', color: "#FFFFFF" }}>如果有，請評估嚴重程度</span>}
+                                      name="severitySkinCondition"
+                                      rules={[{ required: true, message: "請給出評價!" }]}
+                                    >
+                                      <Rate
+                                        character={<span style={{ fontSize: '40px', margin: '0 5px' }}>★</span>}
+                                        count={10} // 使用 10 級評價
+                                      />
+                                    </Form.Item>
+                                  )
+                                }
+                              </Form.Item>
+
+                              {/* 是否就醫治療 */}
+                              <Form.Item
+                                label={<span style={{ fontSize: '25px', color: "#FFFFFF" }}>您是否有就醫治療</span>}
+                                name="treatmentQuestion10"
+                                rules={[{ required: true, message: "請選擇是否就醫!" }]}
+                              >
+                                <Radio.Group>
+                                  <Radio value={true} style={{ color: "#FFFFFF", fontSize: '20px' }}>有</Radio>
+                                  <Radio value={false} style={{ color: "#FFFFFF", fontSize: '20px' }}>無</Radio>
+                                </Radio.Group>
+                              </Form.Item>
+                          </div>
+                        )}
 
                         {/* Navigation Buttons */}
                         <div className="button-group">
@@ -238,14 +304,14 @@ const Feedback = () => {
                             {currentQuestionIndex > 0 && <Button className='button' onClick={prevSection}>上一頁</Button>}
                             
                             {/* 顯示「下一頁」按鈕，僅在非最後一頁 */}
-                            {currentQuestionIndex < 3 && (
+                            {currentQuestionIndex < 4 && (
                               <Button className='button' type="primary" onClick={nextSection}>
                                 下一頁
                               </Button>
                             )}
                             
                             {/* 提交按鈕，只在最後一頁顯示 */}
-                            {currentQuestionIndex === 3 && (
+                            {currentQuestionIndex === 4 && (
                               <Button className='button' type="primary" onClick={nextSection} htmlType="submit">
                                 提交回饋
                               </Button>

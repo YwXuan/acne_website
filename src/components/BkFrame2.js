@@ -9,7 +9,7 @@ const BkFrame2 = ({ selectedId }) => {
 
   const fetchTextData = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/api/textData/${selectedId}`);
+      const response = await fetch(`http://140.133.74.246:31611/api/textData/${selectedId}`);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }

@@ -31,7 +31,7 @@ const Pretest = () => {
 
   const handleStartQuiz = useCallback(async () => {
     try {
-        const response = await fetch(`http://localhost:3001/api/quiz/before/`);
+        const response = await fetch(`http://140.133.74.246:31611/api/quiz/before/`);
         if (!response.ok) {
             throw new Error('Failed to fetch quiz data');
         }

@@ -23,7 +23,7 @@ const SchoolQuiz = () => {
   useEffect(() => {
     const fetchQuizData = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/api/quiz/${topic}`);
+        const response = await fetch(`http://140.133.74.246:31611/api/quiz/${topic}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
