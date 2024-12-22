@@ -90,7 +90,7 @@ const Pretest = () => {
           <div className="frame-wrapper">
                 <div className="frame-parent1">
                   <div className="wrapper">
-                    <div className="div12"><h1>不再為你痘留前測</h1></div>
+                    <div className="div12"><h2>智慧醫療應用於臉部皮膚偵測平台前測</h2></div>
                   </div>
                   <div className="div13" style={{textAlign:'left',}}>
                     <div className="frame-parent_b" style={{flexDirection:'colum'}}>
@@ -113,12 +113,12 @@ const Pretest = () => {
           <div className="frame-wrapper">
                 <div className="frame-parent1">
                   <div className="wrapper">
-                    <div className="div12">
-                      <h2>
+                    <div className="div12" style={{height:"20px"}}>
+                      <h3>
                       <React.Fragment >
                         {quizData[currentQuestionIndex].que}
                       </React.Fragment>
-                    </h2>
+                    </h3>
                     </div>
                   </div>
                   <div className="div13" style={{textAlign:'left',}}>
@@ -146,11 +146,11 @@ const Pretest = () => {
           <div className="frame-parent1">
             <div className="wrapper">
               <div className="div12">
-                <h2>
+                <h3>
                   <React.Fragment >
                     {quizData[currentQuestionIndex].que}
                   </React.Fragment>
-                </h2>
+                </h3>
               </div>
             </div>
             <div className="div13" style={{textAlign:'left',}}>

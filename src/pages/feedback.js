@@ -30,9 +30,9 @@ const Feedback = () => {
     name: '',
     preTestScore: 0,
     postTestScore: 0,
-    courseEvaluation: [0, 0, 0],
-    selfEvaluation: [0, 0, 0],
-    learningTransfer: [0, 0],
+    courseEvaluation: [null, null, null],
+    selfEvaluation: [null, null, null],
+    learningTransfer: [null, null],
     gender: '', // 性別（male/female/other）
     hasSkinCondition: null, // 是否有皮膚疾病（true/false）
     severitySkinCondition: null, // 皮膚疾病嚴重程度（1-10 或 null）

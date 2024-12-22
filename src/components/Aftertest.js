@@ -95,7 +95,7 @@ const Aftertest = () => {
             <div className="frame-wrapper">
                 <div className="frame-parent1">
                     <div className="wrapper">
-                    <div className="div12"><h1>不再為你痘留後測</h1></div>
+                    <div className="div12"><h2>智慧醫療應用於臉部皮膚偵測平台後測</h2></div>
                     </div>
                     <div className="div13" style={{textAlign:'left',}}>
                     <div className="frame-parent_b" style={{flexDirection:'colum'}}>
@@ -116,11 +116,11 @@ const Aftertest = () => {
                 <div className="frame-parent1">
                     <div className="wrapper">
                     <div className="div12">
-                        <h2>
+                        <h3>
                         <React.Fragment >
                         {quizData[currentQuestionIndex].que}
                         </React.Fragment>
-                    </h2>
+                    </h3>
                     </div>
                     </div>
                     <div className="div13" style={{textAlign:'left',}}>
