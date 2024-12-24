@@ -81,11 +81,12 @@
 }
 .page-navigation-group {
   width: 836px;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 0 var(--padding-xl);
-  gap: var(--gap-xl);
-  z-index: 2;
+  /* align-items: flex-start; */
+  justify-content: center;
+  background-color: var(--color-lightsteelblue);
+  /* padding: 0 var(--padding-xl); */
+  /* gap: var(--gap-xl); */
+  /* z-index: 2; */
 }
 .back-button-frame {
   width: 895px;

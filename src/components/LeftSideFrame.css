@@ -115,6 +115,6 @@
 @media screen and (max-width: 725px) {
   .left-side-frame {
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
   }
 }

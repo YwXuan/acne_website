@@ -63,17 +63,9 @@ const SecondaryFrame = () => {
               />
             </div>
             <div className="back-button-frame-child" />
-            <div className="page-navigation-group">
-              <div className="container" onClick={onGroupContainerClick}>
-                <div className="div36">回上頁{}</div>
-                <div className="back3" />
-              </div>
-              <div
-                className="parent1"
-                onClick={() => onGroupContainer1Click([topic])}>
-                <div className="div37">進行後測</div>
-                <div className="quiz1" />
-              </div>
+            <div className="page-navigation-group" 
+                onClick={onGroupContainerClick}>
+                回上頁
             </div>
           </div>
         </div>

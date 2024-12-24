@@ -23,7 +23,8 @@ const Feedback = () => {
 
   // 監聽狀態變化並打印出來
   useEffect(() => {
-    console.log(account, pretest, posttest);
+    // console.log(account, pretest, posttest);
+    console.log('成功取得前後測資訊');
   }, [account, pretest, posttest]);
 
   const [formValues, setFormValues] = useState({
@@ -42,7 +43,8 @@ const Feedback = () => {
   const [allFormValues, setAllFormValues] = useState({}); // 用於保存所有頁面的數據
 
   useEffect(() => {
-    console.log("Form values updated:", formValues);
+    // console.log("Form values updated:", formValues);
+    console.log("Form values updated！");
   }, [formValues]);  // Log when formValues are updated
 
 
@@ -67,8 +69,11 @@ const Feedback = () => {
       form.setFieldsValue(formValues);  // Ensure form is updated with the latest state
     }
   }, [form, formValues]);  // Re-run when formValues change
+  const [isSubmitting, setIsSubmitting] = useState(false); // 添加提交狀態
+
   const sendFeedbackToBackend = async (feedbackData) => {
     try {
+      setIsSubmitting(true); // 開始提交時禁用按鈕
       const response = await fetch('http://140.133.74.246:31611/api/feedback', {
         method: 'POST',
         headers: {
@@ -312,8 +317,8 @@ const Feedback = () => {
                             
                             {/* 提交按鈕，只在最後一頁顯示 */}
                             {currentQuestionIndex === 4 && (
-                              <Button className='button' type="primary" onClick={nextSection} htmlType="submit">
-                                提交回饋
+                              <Button className='button' type="primary" htmlType="submit" onClick={nextSection} disabled={isSubmitting}>
+                                {isSubmitting ? "提交中..." : "提交回饋"}
                               </Button>
                             )}
                           </>

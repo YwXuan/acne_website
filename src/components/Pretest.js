@@ -3,6 +3,8 @@ import InnerFrame from "./InnerFrame";
 import { Button, Input, InputGroup , Radio, RadioGroup ,ButtonToolbar  } from 'rsuite';
 import CheckOutlineIcon from '@rsuite/icons/CheckOutline';
 import { useNavigate, useParams } from "react-router-dom";
+import { message } from "antd";
+import Loading from "./Loadpage";
 import 'rsuite/dist/rsuite.min.css';
 import "./Pretest.css";
 
@@ -16,6 +18,7 @@ const Pretest = () => {
   const [quizData, setQuizData] = useState([]);
   const total = 7; //總題目數
   const [pretest,setpretest] = useState(0); //抓取前測成績
+  const [isLoading, setIsLoading] = useState(false); // 控制等待畫面
 
   
 
@@ -30,21 +33,27 @@ const Pretest = () => {
   }, [navigate]);
 
   const handleStartQuiz = useCallback(async () => {
+    if (!account.trim()) {
+      message.error("請輸入姓名後再繼續");
+      return;
+    }
+    setIsLoading(true); // 開始加載
+
     try {
         const response = await fetch(`http://140.133.74.246:31611/api/quiz/before/`);
         if (!response.ok) {
-            throw new Error('Failed to fetch quiz data');
+          throw new Error("Failed to fetch quiz data");
         }
         const quizData = await response.json();
+        setQuizData(quizData);
         setCurrentPage("quiz");
-        setQuizData(quizData); // 将从后端获取的数据设置为 quizData 状态
-        console.log(quizData)
-        
-    } catch (error) {
-        console.error('Error fetching quiz data:', error);
-        // 处理错误情况
-    }
-}, []);
+      } catch (error) {
+        console.error("Error fetching quiz data:", error);
+        alert("發生錯誤，請稍後再試！");
+      } finally {
+        setIsLoading(false); // 結束加載
+      }
+    }, [account]);
 
 
   useEffect(() => {
@@ -83,6 +92,9 @@ const Pretest = () => {
   };
 
   const renderPage = () => {
+    if (isLoading) {
+      return <Loading />; // 渲染Loading組件
+    }
     switch (currentPage) {
       case "nicknameInput":
         return (

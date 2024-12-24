@@ -44,7 +44,7 @@ const Aftertest = () => {
           const quizData = await response.json();
           setCurrentPage("quiz");
           setQuizData(quizData); // 從後端取得題目資料並更新 quizData 狀態
-          console.log(quizData)
+          // console.log(quizData)
           
       } catch (error) {
           console.error('Error fetching quiz data:', error);

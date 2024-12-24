@@ -46,12 +46,9 @@ const BkFrame2 = ({ selectedId }) => {
             alt="圖片" />
           </Popover>
         </div>
-        <div className="div33"><p>當圖片放入已經訓練好的模型後，模型會將有症狀的位置框選出來，並標示症狀名稱</p></div>
+        <div className="div33" style={{fontSize:"30px"}}><p>當圖片放入已經訓練好的模型後，模型會將有症狀的位置框選出來，並標示症狀名稱</p></div>
         <div className="button-wrapper">
-          <div className="button" onClick={onButtonContainerClick}>
-            <div className="back1" />
-            <div className="div34">重新選擇</div>
-          </div>
+          <div className="button"  onClick={onButtonContainerClick}>重新選擇</div>
         </div>
       </div>
    </div>
